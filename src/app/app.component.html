@@ -1,0 +1,11 @@
+<p>
+  NGX MASK
+</p>
+
+<div [formGroup]="form">
+  <label>CEP:</label>
+  <input type="text" mask="00000-000" formControlName="mask">
+  <br><br>
+  <label>TELEFONE:</label>
+  <input type="text" prefix="+55 " mask="(00) 00000-0000" formControlName="mask">
+</div>
