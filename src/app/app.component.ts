@@ -11,10 +11,19 @@ export class AppComponent  {
   val = null;
 
   form: FormGroup;
+  maskPhoneNumber = "(00) 00000-0000";
 
   ngOnInit() {
     this.form = new FormGroup({
       'mask': new FormControl()
     });
+  }
+
+ switchPhoneMask(phone: number) {
+    if (this.form.get("mask").value.length > 10) {
+      this.maskPhoneNumber = "(00) 00000-0000";
+    } else {
+      this.maskPhoneNumber = "(00) 0000-00009";
+    }
   }
 }
