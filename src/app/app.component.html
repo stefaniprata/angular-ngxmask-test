@@ -9,4 +9,7 @@
   <label>TELEFONE:</label>
   <input formControlName="mask" mask="{{ maskPhoneNumber }}" [validation]="true" (keyup)="switchPhoneMask(form.get('mask').value)">
   <!-- <input type="text" *ngIf="this.lenght == 5 : mask='(00) 00000-0000'" formControlName="mask"> -->
+  <br><br>
+  <label>PREÇO:</label>
+  <input type="text" mask="dot_separator.2">
 </div>
